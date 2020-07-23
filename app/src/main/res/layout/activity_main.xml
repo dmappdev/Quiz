@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/question_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/answer1_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/answer1_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="onClickAnswer1"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/answer2_txt"
+        app:layout_constraintStart_toStartOf="@+id/question_txt"
+        app:layout_constraintTop_toBottomOf="@+id/question_txt" />
+
+    <TextView
+        android:id="@+id/answer2_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="onClickAnswer2"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/answer3_txt"
+        app:layout_constraintStart_toStartOf="@+id/answer1_txt"
+        app:layout_constraintTop_toBottomOf="@+id/answer1_txt" />
+
+    <TextView
+        android:id="@+id/answer3_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="onClickAnwer3"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/outcome_txt"
+        app:layout_constraintStart_toStartOf="@+id/answer2_txt"
+        app:layout_constraintTop_toBottomOf="@+id/answer2_txt" />
+
+    <TextView
+        android:id="@+id/outcome_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/answer3_txt"
+        app:layout_constraintTop_toBottomOf="@+id/answer3_txt" />
+</androidx.constraintlayout.widget.ConstraintLayout>
